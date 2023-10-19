@@ -1,15 +1,14 @@
-import moduleName from 'module'
-
-
-import './App.css'
-
+import { Outlet } from 'react-router-dom'
+import { Navbar, Footer } from './components/molecules'
+import { ThemeProvider } from 'styled-components'
+import theme from './theme'
 function App() {
-  
-
   return (
-    <>
- 
-    </>
+    <ThemeProvider theme={theme}>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </ThemeProvider>
   )
 }
 
