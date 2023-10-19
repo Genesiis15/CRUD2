@@ -6,7 +6,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
+
       <Outlet />
+
+
       <Footer />
     </ThemeProvider>
   )

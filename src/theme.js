@@ -3,7 +3,7 @@ const colors = {
     secondary: '#3876BF',
     danger: '#E1AA74',
     info: '#F3F0CA',
-    white: '#fff',
+    white: '#f7f7f7',
     silver: '#8f8f8f'
 }
 
