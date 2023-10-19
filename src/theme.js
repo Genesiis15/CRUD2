@@ -4,7 +4,9 @@ const colors = {
     danger: '#E1AA74',
     info: '#F3F0CA',
     white: '#f7f7f7',
-    silver: '#8f8f8f'
+    silver: '#8f8f8f',
+    whiteSilver: '#e9e9e9',
+
 }
 
 export const getColor = (color) => {
