@@ -4,19 +4,23 @@ import {
 
   
 } from "react-router-dom";
+import App from './App'
 export const router = createBrowserRouter([
     {
       path: "/",
       element: (
-       <LandingView/>
+       <App/>
       ),
+      children: [
+        {
+            path: "/",
+            element: <LandingView/>,
+          },
+        {
+          path: "/services",
+          element: <div>services</div>,
+        },
+      ],
     },
-    {
-        path: "services",
-        element: <div>Services</div>,
-      },
-    {
-      path: "about",
-      element: <div>About</div>,
-    },
+ 
   ]);

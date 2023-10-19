@@ -1,11 +1,8 @@
-import {Navbar} from '../../components/molecules/Navbar/Navbar'
-export const LandingView = () =>{
+import { SectionLanding } from '../../components/organims/SectionLanding/SectionLanding'
+export const LandingView = () => {
     return <>
-    
-          <div>
-          <Navbar/>
-          <h1>Landing</h1>
-          
+        <div>
+            <SectionLanding />
         </div>
     </>
 }

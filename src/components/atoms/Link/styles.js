@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-import {colors} from '../../../theme'
-
-const getColor = (color) => {
-    return color == 'primary' && colors.primary || color == 'secondary' && colors.secondary || color == 'danger' && colors.danger || color == 'info' && colors.info  
-}
+import {getColor} from '../../../theme'
 
 export const LinkStyle = styled(Link)`
     color:${props =>  getColor(props.color) };

@@ -1,8 +1,6 @@
 import styled from 'styled-components'
-
+import { getColor } from '../../../theme'
 export const Text = styled.p`
     font-size: 25px;
-    
-    text-align: justify;    
-
+    color: ${props => getColor(props.color)}
 `
