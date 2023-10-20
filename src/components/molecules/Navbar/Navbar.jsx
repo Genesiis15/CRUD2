@@ -14,7 +14,7 @@ export const Navbar = () => {
         </Search>
         <div >
             <Link description={'Home'} link={'/'} color='secondary' />
-            <Link description={'Service'} link={'/services'} color='secondary' />
+            <Link description={'Shop'} link={'/commerce'} color='secondary' />
             <Link description={'About'} link={'/about'} color='secondary' />
         </div>
 

@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 export const SectionStyle = styled.section`
     border-radius: 20px;
-    border:${(props) => props.solid ?  '2px solid gray' : 'none'};
+    border:${(props) => props.solid ? '2px solid gray' : 'none'};
     flex: 1;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: ${(props) => props.row ? 'row' : 'column'};
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height:400px;
 `

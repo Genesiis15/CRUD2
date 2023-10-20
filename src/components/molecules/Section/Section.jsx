@@ -1,8 +1,8 @@
-import {SectionStyle} from './styles'
+import { SectionStyle } from './styles'
 
 
-export const Section =({children, solid}) =>{
-    return <SectionStyle solid={solid}>
-    {children}
+export const Section = ({ children, solid, row }) => {
+    return <SectionStyle solid={solid} row={row}>
+        {children}
     </SectionStyle>
 }
