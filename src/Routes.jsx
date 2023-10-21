@@ -1,4 +1,4 @@
-import { LandingView, CommerceView } from './views/'
+import { LandingView, CommerceView, ProductView } from './views'
 import {
   createBrowserRouter,
 } from "react-router-dom";
@@ -15,8 +15,12 @@ export const router = createBrowserRouter([
         element: <LandingView />,
       },
       {
-        path: "/commerce",
+        path: "/shop",
         element: <CommerceView />,
+      },
+      {
+        path: "/shop/:id",
+        element: <ProductView />,
       },
     ],
   },

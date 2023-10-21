@@ -17,7 +17,7 @@ export const GroupCard = () => {
             <Title title={'Frenchie'} />
             <div style={{ marginBottom: '150px' }}>
                 {products.map(({ id, title, image }) => <div key={id}>
-                    <h1>{title}</h1>
+                    <h1>{title}{id}</h1>
                     <img src={image} width={200} height={200} />
                 </div>)}
             </div>

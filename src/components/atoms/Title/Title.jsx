@@ -1,8 +1,7 @@
 import { TitleStyle } from './styles'
-import { useTheme } from 'styled-components';
-export const Title = ({ title }) => {
-    const theme = useTheme();
+export const Title = ({ title, color }) => {
+
     return (
-        <TitleStyle theme={theme.secondary}>{title}</TitleStyle>
+        <TitleStyle theme={color}>{title}</TitleStyle>
     )
 }
