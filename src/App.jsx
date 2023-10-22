@@ -6,7 +6,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <main style={{ marginTop: '50px', marginBottom: '100px' }}>
+      <main style={{ marginTop: '50px', marginBottom: '100px', padding: '0px 8%' }}>
         <Outlet />
       </main>
       <Footer />

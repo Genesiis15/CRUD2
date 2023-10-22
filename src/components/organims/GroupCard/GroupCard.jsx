@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import { getQuery } from '../../../queries'
 import { Title } from '../../atoms/Title/Title'
+import { useTheme } from 'styled-components'
+
+import { Card } from '../../molecules/Card/Card'
 
 export const GroupCard = () => {
     const [products, setProducts] = useState([]);
+    const theme = useTheme()
 
     useEffect(() => {
         getQuery('products').then(res => setProducts(res))
@@ -13,13 +17,11 @@ export const GroupCard = () => {
 
 
         <div>
+            <Title title={'Frenchie - Shop'} color={theme.secondary} />
 
-            <Title title={'Frenchie'} />
-            <div style={{ marginBottom: '150px' }}>
-                {products.map(({ id, title, image }) => <div key={id}>
-                    <h1>{title}{id}</h1>
-                    <img src={image} width={200} height={200} />
-                </div>)}
+
+            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginBottom: '150px' }}>
+                {products.map((data) => <Card key={data.id} data={data} />)}
             </div>
         </div>
     )
