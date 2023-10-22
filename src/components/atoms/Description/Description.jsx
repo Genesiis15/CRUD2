@@ -1,7 +1,7 @@
 import { Text } from './styles'
 
-export const Description = ({ text, color }) => {
+export const Description = ({ text, color, bold }) => {
     return <>
-        <Text color={color}>{text}</Text>
+        <Text color={color} bold={bold}>{text}</Text>
     </>
 }
