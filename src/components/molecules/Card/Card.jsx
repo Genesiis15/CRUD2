@@ -4,7 +4,11 @@ import { ImageCircle } from '../../atoms/ImageCircle/ImageCircle'
 import { ContentCard } from './styles'
 import { useTheme } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
+import { ProductsContext } from '../../../context/productsContext'
+import { useContext } from 'react'
+
 export const Card = ({ data }) => {
+    const { products, setProducts } = useContext(ProductsContext)
     const theme = useTheme()
     const navigate = useNavigate()
     return <ContentCard theme={theme.info}>
@@ -13,7 +17,10 @@ export const Card = ({ data }) => {
         <div style={{ display: 'flex', width: '100%', gap: '10px' }}>
             <ButtonCard color={theme.primary} text='Ver mas' handleClick={() => navigate(`/shop/${data.id}`)} />
 
-            <ButtonCard color={theme.info} text={`$${data.price}`} handleClick={() => console.log('Agregado')} />
+            <ButtonCard color={theme.info} text={`$${data.price}`} handleClick={() => {
+                alert(`Se agrego al carrito el: ${data.title}`)
+                setProducts([...products, data])
+            }} />
         </div>
     </ContentCard>
 }
