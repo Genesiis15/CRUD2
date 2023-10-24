@@ -3,6 +3,7 @@ import { NavbarStyle } from './styles'
 import { Brand } from '../../atoms/Brand/Brand'
 import { Search } from '../../atoms/Search/Search'
 import { FaSearch } from 'react-icons/fa';
+
 export const Navbar = () => {
     return <NavbarStyle>
 
@@ -15,7 +16,7 @@ export const Navbar = () => {
         <div >
             <Link description={'Home'} link={'/'} color='secondary' />
             <Link description={'Shop'} link={'/shop'} color='secondary' />
-            <Link description={'About'} link={'/about'} color='secondary' />
+            <Link description={'Cart'} link={'/cart'} color='secondary' />
         </div>
 
     </NavbarStyle>
