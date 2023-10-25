@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import App from './App'
+import { CartView } from './views/CartView/CartView'
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <h1>cart</h1>,
+        element: <CartView />,
       },
 
     ],
