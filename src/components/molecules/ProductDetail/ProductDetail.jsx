@@ -5,13 +5,14 @@ import { ButtonCard } from '../../atoms'
 import { useTheme } from 'styled-components';
 import { ProductsContext } from '../../../context/productsContext'
 import { useContext } from 'react'
+import { Image } from '../../atoms/Image/Image'
 export const ProductDetail = ({ data }) => {
     const theme = useTheme()
     const { products, setProducts } = useContext(ProductsContext)
     return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '20px', padding: '40px', justifyContent: 'space-around' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'space-around', marginBottom: '35%' }}>
             <Section>
-                <img src={data.image} />
+                <Image img={data.image} />
             </Section>
             <Content>
                 <Title title={data.title} color={theme.primary} />
