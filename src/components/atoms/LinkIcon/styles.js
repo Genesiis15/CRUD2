@@ -9,6 +9,8 @@ export const LinkStyle = styled(Link)`
     text-decoration:none;
     padding:10px;
     border-radius:5px;
+    display:flex;
+    align-items:center;
     &:hover{
         background:${({ color }) => getColor(color)}1a;
     }

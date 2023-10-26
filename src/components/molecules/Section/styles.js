@@ -11,4 +11,6 @@ export const SectionStyle = styled.section`
     align-items: center;
     text-align: center;
     min-height:400px;
+    min-width:800px;
+
 `

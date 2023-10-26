@@ -9,7 +9,7 @@ function App() {
 
       <ThemeProvider theme={theme}>
         <Navbar />
-        <main style={{ marginTop: '50px', marginBottom: '100px', padding: '0px 8%' }}>
+        <main style={{ marginTop: '80px', marginBottom: '100px', padding: '0px 8%', minHeight: '600px' }}>
           <Outlet />
         </main>
         <Footer />

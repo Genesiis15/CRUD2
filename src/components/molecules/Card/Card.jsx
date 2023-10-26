@@ -6,7 +6,7 @@ import { useTheme } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { ProductsContext } from '../../../context/productsContext'
 import { useContext } from 'react'
-
+import Swal from 'sweetalert2'
 export const Card = ({ data }) => {
     const { products, setProducts } = useContext(ProductsContext)
     const theme = useTheme()
@@ -18,7 +18,13 @@ export const Card = ({ data }) => {
             <ButtonCard color={theme.primary} text='Ver mas' handleClick={() => navigate(`/shop/${data.id}`)} />
 
             <ButtonCard color={theme.info} text={`$${data.price}`} handleClick={() => {
-                alert(`Se agrego al carrito el: ${data.title}`)
+                Swal.fire({
+                    title: 'Agregado!',
+                    text: data.title,
+                    icon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 setProducts([...products, data])
             }} />
         </div>

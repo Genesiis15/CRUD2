@@ -1,60 +1,40 @@
 import { ImageCircle } from '../../atoms/ImageCircle/ImageCircle'
-
+import Swal from 'sweetalert2'
 import { ButtonCard } from '../../atoms/ButtonCard/ButtonCard'
 import { Description } from '../../atoms/Description/Description'
 import { useTheme } from 'styled-components';
 import { ItemCartStyled, ContentInfoFooter, Close } from './styles'
+import { ProductsContext } from '../../../context/productsContext'
+import { useContext } from 'react';
 
-export const ItemCart = () => {
+
+export const ItemCart = ({ data }) => {
+    const { products, setProducts } = useContext(ProductsContext)
     const theme = useTheme()
 
     return <ItemCartStyled>
 
-        <ImageCircle imgCircle={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkbWGESuQbOlJZDYiJGLwuuANZ9VvTFYugYOYBBBhT2O4FsK4tq3V_kQpmBr94_T-q4Fg&usqp=CAU'} />
+        <ImageCircle imgCircle={data.image} />
         <div>
-            <Description text={"Bulldog Frances"} color={'secondary'} bold={true} />
+            <Description text={data.title} color={'secondary'} bold={true} />
 
             <ContentInfoFooter>
-                <Description text={"$1000"} color={'primary'} />
-                <div>
-                    <select>
-                        <option>
-                            1
-                        </option>
-                        <option>
-                            2
-                        </option>
-                        <option>
-                            3
-                        </option>
-                        <option>
-                            4
-                        </option>
-                        <option>
-                            5
-                        </option>
-                        <option>
-                            6
-                        </option>
-                        <option>
-                            7
-                        </option>
-                        <option>
-                            8
-                        </option>
-                        <option>
-                            9
-                        </option>
-                        <option>
-                            10
-                        </option>
-                    </select>
-                </div>
+                <Description text={`$${data.price}`} color={'primary'} />
+
             </ContentInfoFooter>
         </div>
 
         <Close>
-            <ButtonCard text={"X"} theme={theme.danger} color={theme.danger} />
+            <ButtonCard text={"X"} theme={theme.danger} color={theme.danger} handleClick={() => {
+                Swal.fire({
+                    title: 'Eliminado!',
+                    text: data.title,
+                    icon: 'error',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                setProducts(products.filter((valor) => valor.id !== data.id))
+            }} />
         </Close>
     </ItemCartStyled>
 }
