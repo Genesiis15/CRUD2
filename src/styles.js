@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
 export const Grid = styled.main`
+
 margin-bottom:8%;
 min-height:73vh;
 display:flex;
-  @media (min-width: 768px) {
+  @media (min-width: 724px) {
     flex: 1 0 50%;
+
 
   }
 

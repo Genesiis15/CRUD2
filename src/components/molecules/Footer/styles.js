@@ -5,7 +5,7 @@ export const FooterStyle = styled.footer`
     color:white;
     font-weight:bold;
     position:absolute;
-
+    z-index:1;
     width: 100%;
     background: #3586ff;
     min-height: 60px;

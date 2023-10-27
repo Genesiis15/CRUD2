@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-
+import { getColor } from '../../../theme'
 
 export const TitleStyle = styled.h1`
+    color: ${props => getColor(props.theme)};
     font-size:2rem;
-    color: ${props => props.theme};
     @media (min-width: 724px) {
         font-size:5rem;
   }

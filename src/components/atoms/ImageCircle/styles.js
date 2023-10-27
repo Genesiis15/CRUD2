@@ -7,6 +7,9 @@ export const Content = styled.div`
     box-sizing: border-box;
     overflow: hidden;
     padding: 10px;
+    @media (min-width: 724px) {
+        font-size:5rem;
+  }
 `
 export const ImgStyle = styled.img`
     object-fit: contain;
