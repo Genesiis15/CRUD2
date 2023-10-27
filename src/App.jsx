@@ -3,15 +3,16 @@ import { Navbar, Footer } from './components/molecules'
 import { ThemeProvider } from 'styled-components'
 import { ProductsProvider } from './context/productsContext'
 import theme from './theme'
+import { Grid } from './styles'
 function App() {
   return (
     <ProductsProvider>
 
       <ThemeProvider theme={theme}>
         <Navbar />
-        <main style={{ marginTop: '80px', marginBottom: '100px', padding: '0px 8%', minHeight: '600px' }}>
+        <Grid>
           <Outlet />
-        </main>
+        </Grid>
         <Footer />
       </ThemeProvider>
     </ProductsProvider>

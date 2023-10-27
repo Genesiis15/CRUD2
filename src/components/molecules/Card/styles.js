@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 export const ContentCard = styled.div`
     flex:1; 
-    min-width:300px;
-    max-width:300px;
+    min-width:100px;
+    width:100%;
+  
     padding:50px;
     display:flex;
     flex-direction:column;

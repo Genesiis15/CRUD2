@@ -19,7 +19,7 @@ export const Card = ({ data }) => {
 
             <ButtonCard color={theme.info} text={`$${data.price}`} handleClick={() => {
                 Swal.fire({
-                    title: 'Agregado!',
+                    title: 'Agregado al carrito!',
                     text: data.title,
                     icon: 'success',
                     showConfirmButton: false,

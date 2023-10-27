@@ -5,7 +5,7 @@ padding:10px;
 display:flex;
 align-items:center;
 border-radius:3px;
-
+gap:20px;
 position:relative;
 `
 

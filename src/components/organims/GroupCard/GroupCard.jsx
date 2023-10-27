@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { getQuery } from '../../../queries'
 import { Title } from '../../atoms/Title/Title'
+
+import { Content, ContentItem } from './styles'
 import { Card } from '../../molecules/Card/Card'
 
 export const GroupCard = () => {
@@ -11,11 +13,11 @@ export const GroupCard = () => {
     }, []);
 
     return (
-        <div>
-            <Title title={'Frenchie - Shop'} color={'secondary'} />
-            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginBottom: '150px' }}>
+        <Content>
+            <Title title={'Frenchie - Shop'} color={"secondary"} />
+            <ContentItem>
                 {products.map((data) => <Card key={data.id} data={data} />)}
-            </div>
-        </div>
+            </ContentItem>
+        </Content>
     )
 }
